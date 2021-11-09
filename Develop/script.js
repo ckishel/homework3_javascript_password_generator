@@ -90,31 +90,133 @@ function generatePassword(length, uppercase, lowercase, specialchars, numbers) {
     return password
 
   }else if (uppercase =='y' && lowercase == 'y' && specialchars == 'n' && numbers == 'y'){
-    var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
+      var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
 
-    for (let i = 0; i < length; i++) {
-      password += character[Math.floor(Math.random() * character.length)]
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
     
+    }
+    return password
+
+  }else if (uppercase =='y' && lowercase == 'n' && specialchars == 'y' && numbers == 'y'){
+      var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@^_`{|}~1234567890'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+    
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'y' && specialchars == 'y' && numbers == 'y'){
+      var character = 'abcdefghijklmnopqrstuvwxyz!"#$%&()*+,-./:;<=>?@^_`{|}~1234567890'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+  
+    }
+    return password
+    
+    //If two answers are yes
+
+  }else if (uppercase =='y' && lowercase == 'y' && specialchars == 'n' && numbers == 'n'){
+      var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+    
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'n' && specialchars == 'y' && numbers == 'y'){
+      var character = '!"#$%&()*+,-./:;<=>?@^_`{|}~1234567890'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+    
+    }
+    return password
+
+  }else if (uppercase =='y' && lowercase == 'n' && specialchars == 'n' && numbers == 'y'){
+      var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+    
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'y' && specialchars == 'y' && numbers == 'n'){
+      var character = 'abcdefghijklmnopqrstuvwxyz!"#$%&()*+,-./:;<=>?@^_`{|}~'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+
+    }
+    return password
+
+  }else if (uppercase =='y' && lowercase == 'n' && specialchars == 'y' && numbers == 'n'){
+      var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@^_`{|}~'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+  
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'y' && specialchars == 'n' && numbers == 'y'){
+      var character = 'abcdefghijklmnopqrstuvwxyz1234567890'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+
+    }
+    return password
+  
+      //If one answer is yes
+  
+  
+  }else if (uppercase =='y' && lowercase == 'n' && specialchars == 'n' && numbers == 'n'){
+      var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+    
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'y' && specialchars == 'n' && numbers == 'n'){
+      var character = 'abcdefghijklmnopqrstuvwxyz'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'n' && specialchars == 'y' && numbers == 'n'){
+      var character = '!"#$%&()*+,-./:;<=>?@^_`{|}~'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+  
+    }
+    return password
+
+  }else if (uppercase =='n' && lowercase == 'n' && specialchars == 'n' && numbers == 'y'){
+      var character = '1234567890'
+
+      for (let i = 0; i < length; i++) {
+        password += character[Math.floor(Math.random() * character.length)]
+
+    }
+    return password
+  
   }
-  return password
-  }
-
-
-//Items to do: 1) create a cancel button 2) how can I ensure that if they say yes to all criteria, it must contain at least one upper, one lower, one number and one special?
-//3) how can I use the javascript characters represented by a number, instead of specifically defining those characters? 4) if they say no to all, how do I get this to restart at select length?
-
-
-
-
-
-
-
-
-
 
 }
 
-
+//Items to do: 1) create a cancel button 2) how can I ensure that if they say yes to all criteria, it must contain at least one upper, one lower, one number and one special?
+//3) how can I use the javascript characters represented by a number, instead of specifically defining those characters? 4) if they say no to all, how do I get this to restart at select length?
 
 
 
