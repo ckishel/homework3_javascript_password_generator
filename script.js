@@ -10,7 +10,7 @@ function writePassword() {
   //Ask the user the password length (using function above called WritePassword) - what is the difference between while and else if?
 
   var length = window.prompt ("Enter password length between 8 and 128 characters")
-  while (length <= 7 || length >= 128){
+  while (length <= 7 || length > 128){
     var length = window.prompt("Please pick a number between 8 and 128 characters")
   }
   //Ask the user if he wants upper case
@@ -58,7 +58,7 @@ function generatePassword(length, uppercase, lowercase, specialchars, numbers) {
 
     //includes uppercase, lowercase, special characters & numbers
     
-    //If all four answers are no - send error message - can we make this restart to prompt 1?
+    //If all four answers are no - validate at least one selection was made
 
     if (uppercase == 'n' && lowercase == 'n' && specialchars == 'n' && numbers == 'n'){
       choices = alert("You must choose at least one Yes criteria");
@@ -212,7 +212,14 @@ function generatePassword(length, uppercase, lowercase, specialchars, numbers) {
 
 }
 
-//Items to do: 1) create a cancel button 2) how can I ensure that if they say yes to all criteria, it must contain at least one upper, one lower, one number and one special?
-//3) how can I use the javascript characters represented by a number, instead of specifically defining those characters? 4) if they say no to all, how do I get this to restart at select length?
+//Items to do:
+//1) make the cancel button reset the page - cancel button does not work
+//2) how can I ensure that if they say yes to all criteria, it must contain at least one upper, one lower, one number and one special?
+//  2 a) use https://www.net-comber.com/charset.html for javascript character set. Example: lowercase is from   97 to 122. Right now I have chosen the characters to use.
+//3) how can I use the javascript characters represented by a number, instead of specifically defining those characters?
+//4) if they say no to all, how do I get this to restart at select length?
+//5) how can I use an array to define possibilities, rather than individually listing out each possible character set?
+//6) How can I ensure to use the whole special character set? I tried to use in characters and had to remove brackets and apostophe " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~" (some of these are missing)
+//7)If all four answers are no - send error message - can we make this restart to prompt 1?
 
-// use https://www.net-comber.com/charset.html for javascript character set. Example: lowercase is from   97 to 122. Right now I have chosen the characters to use.
+
