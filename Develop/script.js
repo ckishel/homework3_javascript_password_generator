@@ -41,8 +41,6 @@ function writePassword() {
     var numbers = window.prompt("Please enter Y or N to select lowercase letters")
   }
 
-  //Check the password to ensure that it contains each, based on criteria - fourloop
-
   //include all the variables that were selected above
 
   var password = generatePassword(length, uppercase, lowercase, specialchars, numbers);
@@ -59,8 +57,7 @@ function generatePassword(length, uppercase, lowercase, specialchars, numbers) {
   var password = ''
 
     //includes uppercase, lowercase, special characters & numbers
-    // use https://www.net-comber.com/charset.html for javascript character set. Example: lowercase is from   97 to 122. Right now I have chosen the characters to use.
-
+    
     //If all four answers are no - send error message - can we make this restart to prompt 1?
 
     if (uppercase == 'n' && lowercase == 'n' && specialchars == 'n' && numbers == 'n'){
@@ -218,6 +215,4 @@ function generatePassword(length, uppercase, lowercase, specialchars, numbers) {
 //Items to do: 1) create a cancel button 2) how can I ensure that if they say yes to all criteria, it must contain at least one upper, one lower, one number and one special?
 //3) how can I use the javascript characters represented by a number, instead of specifically defining those characters? 4) if they say no to all, how do I get this to restart at select length?
 
-
-
-
+// use https://www.net-comber.com/charset.html for javascript character set. Example: lowercase is from   97 to 122. Right now I have chosen the characters to use.
