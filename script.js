@@ -9,7 +9,11 @@ function writePassword() {
 
   //Ask the user the password length (using function above called WritePassword) - what is the difference between while and else if?
 
-  var length = window.prompt ("Enter password length between 8 and 128 characters")
+  var length = window.parseInt(prompt("Enter password length between 8 and 128 characters"))
+  if (Number.isNaN(length)){
+alert("PLEASE ENTER A WHOLE INTEGER")
+return null
+  }
   while (length <= 7 || length > 128){
     var length = window.prompt("Please pick a number between 8 and 128 characters")
   }
@@ -215,11 +219,15 @@ function generatePassword(length, uppercase, lowercase, specialchars, numbers) {
 //Items to do:
 //1) make the cancel button reset the page - cancel button does not work
 //2) how can I ensure that if they say yes to all criteria, it must contain at least one upper, one lower, one number and one special?
-//  2 a) use https://www.net-comber.com/charset.html for javascript character set. Example: lowercase is from   97 to 122. Right now I have chosen the characters to use.
 //3) how can I use the javascript characters represented by a number, instead of specifically defining those characters?
+// 3 a) use https://www.net-comber.com/charset.html for javascript character set. Example: lowercase is from   97 to 122. Right now I have chosen the characters to use.
 //4) if they say no to all, how do I get this to restart at select length?
 //5) how can I use an array to define possibilities, rather than individually listing out each possible character set?
 //6) How can I ensure to use the whole special character set? I tried to use in characters and had to remove brackets and apostophe " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~" (some of these are missing)
 //7)If all four answers are no - send error message - can we make this restart to prompt 1?
+//8)Should I ensure that the # entered first is an integer? You can enter something like 8.2 as long as it's between 8 and 128. Right now I can enter a "t" and break it or I can enter a 6.7 and it will round at the end,
+// 8 a) but I want to use is.integer https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger
+//9) how can I insert a "clear" button into my html, then an event listener to understand I clicked clear, then select the text box and clear it? or how do I make the cencel button work?
+//10) how would I insert a copy button at the end?
 
 
